@@ -1,0 +1,15 @@
+:root {
+  --bg-primary: #0f0f12;
+  --bg-secondary: #151518;
+  --bg-elevated: #1c1c21;
+
+  --gold: #c5a16e;
+  --gold-light: #dbc39a;
+  --gold-dark: #9f7f4a;
+
+  --text-primary: #f2f2f2;
+  --text-muted: #9a9aa0;
+
+  --radius-lg: 18px;
+  --radius-pill: 999px;
+}

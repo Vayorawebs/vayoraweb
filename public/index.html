@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="Vayoura Web — modern websites, portfolios, and digital solutions for growing businesses."
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <title>Vayoura Web | Digital Experiences</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+
+    <!--
+      This HTML file is a template.
+      The build step will inject bundled scripts automatically.
+    -->
+  </head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <!-- React root -->
+    <div id="root"></div>
+
+    <!-- PostHog analytics (keep or remove as you wish) -->
+    <script>
+      !(function (t, e) {
+        var o, n, p, r;
+        e.__SV ||
+          ((window.posthog = e),
+          (e._i = []),
+          (e.init = function (i, s, a) {
+            function g(t, e) {
+              var o = e.split(".");
+              2 == o.length && ((t = t[o[0]]), (e = o[1]));
+              t[e] = function () {
+                t.push([e].concat([].slice.call(arguments, 0)));
+              };
+            }
+            p = t.createElement("script");
+            p.type = "text/javascript";
+            p.async = true;
+            p.src =
+              s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") +
+              "/static/array.js";
+            r = t.getElementsByTagName("script")[0];
+            r.parentNode.insertBefore(p, r);
+
+            var u = e;
+            for (
+              o =
+                "init capture identify reset on off get_distinct_id".split(" "),
+                n = 0;
+              n < o.length;
+              n++
+            )
+              g(u, o[n]);
+
+            e._i.push([i, s, a]);
+          }),
+          (e.__SV = 1));
+      })(document, window.posthog || []);
+
+      posthog.init(
+        "phc_yJW1VjHGGwmCbbrtczfqqNxgBDbhlhOWcdzcIJEOTFE",
+        {
+          api_host: "https://us.i.posthog.com",
+          person_profiles: "identified_only",
+        }
+      );
+    </script>
+  </body>
+</html>

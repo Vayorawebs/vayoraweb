@@ -1,0 +1,24 @@
+/* VAYORA_WEB App Styles */
+
+.App {
+  min-height: 100vh;
+  background: var(--vayora-bg-primary);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}

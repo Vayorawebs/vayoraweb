@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/vayoraweb/static/css/main.7b35a8c0.css",
+    "main.js": "/vayoraweb/static/js/main.0ebc8161.js",
+    "index.html": "/vayoraweb/index.html",
+    "main.7b35a8c0.css.map": "/vayoraweb/static/css/main.7b35a8c0.css.map",
+    "main.0ebc8161.js.map": "/vayoraweb/static/js/main.0ebc8161.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7b35a8c0.css",
+    "static/js/main.0ebc8161.js"
+  ]
+}
