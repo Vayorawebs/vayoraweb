@@ -34,7 +34,7 @@ const Contact = () => {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: process.env.REACT_APP_WEB3FORMS_KEY || "YOUR_ACCESS_KEY_HERE",
+          access_key: "26f6ed7b-9f70-47ae-b360-66f398e296bd",
           name: formData.name,
           email: formData.email,
           phone: formData.phone || "N/A",
@@ -52,7 +52,7 @@ const Contact = () => {
         title: "Message Sent Successfully!",
         description: "We'll get back to you within 24 hours.",
       });
-      
+
       setFormData({
         name: '',
         email: '',
@@ -101,7 +101,7 @@ const Contact = () => {
                 Let's Build Your Digital Aura
               </h2>
               <p className="text-[var(--vayora-text-secondary)] mb-8 leading-relaxed">
-                Your business has potential. Your ideas have power. Your brand deserves to shine online. 
+                Your business has potential. Your ideas have power. Your brand deserves to shine online.
                 Let's bring it to life — elegantly, creatively, and beautifully.
               </p>
 
