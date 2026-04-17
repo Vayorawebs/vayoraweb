@@ -1,16 +1,16 @@
 // Mock data for VAYORA_WEB website
 
 export const portfolioProjects = [
-    {
+  {
     id: 8,
     title: "HugoseaFood Restaurant",
     category: "Restaurant",
     description: "Seafood restaurant with online ordering system",
     image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80",
-    url: "https://vayouraweb.github.io/HugoseaFood/",
+    url: "https://vayorawebs.github.io/HugoseaFood/",
     technologies: ["React", "E-commerce", "Payment Gateway"]
   },
-   {
+  {
     id: 12,
     title: "Nova Air Duct Cleaning",
     category: "Business",
@@ -19,13 +19,13 @@ export const portfolioProjects = [
     url: "https://novaairductcleaning.ca/",
     technologies: ["WordPress", "SEO", "Lead Forms"]
   },
-   {
+  {
     id: 2,
     title: "Baresto Restaurant",
     category: "Restaurant",
     description: "Elegant restaurant website with menu showcase and online booking",
     image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80",
-    url: "https://vayouraweb.github.io/Baresto/",
+    url: "https://vayorawebs.github.io/Baresto/",
     technologies: ["HTML", "CSS", "JavaScript"]
   },
   {
@@ -34,26 +34,26 @@ export const portfolioProjects = [
     category: "Business",
     description: "Modern business website with comprehensive service showcase",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
-    url: "https://vayouraweb.github.io/TECH/",
+    url: "https://vayorawebs.github.io/TECH/",
     technologies: ["React", "Tailwind CSS", "Animation"]
   },
- 
- {
-  id: 3,
-  title: "Nail Beauty Salon",
-  category: "Salon",
-  description: "Premium salon website with service booking and gallery",
-  image: "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=800&q=80",
-  url: "https://vayouraweb.github.io/micanail/",
-  technologies: ["React", "CSS3", "Booking System"]
-},
+
+  {
+    id: 3,
+    title: "Nail Beauty Salon",
+    category: "Salon",
+    description: "Premium salon website with service booking and gallery",
+    image: "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=800&q=80",
+    url: "https://vayorawebs.github.io/micanail/",
+    technologies: ["React", "CSS3", "Booking System"]
+  },
   {
     id: 4,
     title: "Ice Cream Restro",
     category: "Business",
     description: "Fun and vibrant water park website with ticket booking",
     image: "https://images.unsplash.com/photo-1576610616656-d3aa5d1f4534?w=800&q=80",
-    url: "https://vayouraweb.github.io/wave/",
+    url: "https://vayorawebs.github.io/wave/",
     technologies: ["HTML5", "CSS3", "JavaScript"]
   },
   {
@@ -62,7 +62,7 @@ export const portfolioProjects = [
     category: "Technology",
     description: "Cutting-edge metaverse platform with immersive design",
     image: "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=800&q=80",
-    url: "https://vayouraweb.github.io/metaverse/",
+    url: "https://vayorawebs.github.io/metaverse/",
     technologies: ["React", "3D Graphics", "WebGL"]
   },
   {
@@ -71,7 +71,7 @@ export const portfolioProjects = [
     category: "Healthcare",
     description: "Professional dental clinic website with appointment system",
     image: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&q=80",
-    url: "https://vayouraweb.github.io/chamanhospital/",
+    url: "https://vayorawebs.github.io/chamanhospital/",
     technologies: ["React", "Appointment System", "Tailwind"]
   },
   {
@@ -80,7 +80,7 @@ export const portfolioProjects = [
     category: "Beauty",
     description: "High-end salon website with sophisticated design",
     image: "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=800&q=80",
-    url: "https://vayouraweb.github.io/luxsalon/",
+    url: "https://vayorawebs.github.io/luxsalon/",
     technologies: ["HTML5", "CSS3", "Bootstrap"]
   },
 
@@ -90,7 +90,7 @@ export const portfolioProjects = [
     category: "Education",
     description: "Modern educational platform with course management",
     image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80",
-    url: "https://vayouraweb.github.io/brainbloom/",
+    url: "https://vayorawebs.github.io/brainbloom/",
     technologies: ["React", "LMS", "Video Integration"]
   },
   {
@@ -99,7 +99,7 @@ export const portfolioProjects = [
     category: "Automotive",
     description: "Car dealership website with inventory management",
     image: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=800&q=80",
-    url: "https://vayouraweb.github.io/VERMA-MOTORS/",
+    url: "https://vayorawebs.github.io/VERMA-MOTORS/",
     technologies: ["HTML", "CSS", "JavaScript"]
   },
   {
@@ -108,18 +108,18 @@ export const portfolioProjects = [
     category: "Fitness",
     description: "Dynamic gym website with membership and class schedules",
     image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80",
-    url: "https://vayouraweb.github.io/THE-CROWN-GYM/",
+    url: "https://vayorawebs.github.io/THE-CROWN-GYM/",
     technologies: ["React", "Booking System", "Animation"]
   },
- {
-  id: 13,
-  title: "NvCreation Studio",
-  category: "Business",
-  description: "Dynamic Clothing website with stitching and styling",
-  image: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=800&q=80",
-  url: "https://vayouraweb.github.io/nvcreation/",
-  technologies: ["React", "Booking System", "Animation"]
-}
+  {
+    id: 13,
+    title: "NvCreation Studio",
+    category: "Business",
+    description: "Dynamic Clothing website with stitching and styling",
+    image: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=800&q=80",
+    url: "https://vayorawebs.github.io/nvcreation/",
+    technologies: ["React", "Booking System", "Animation"]
+  }
 ];
 
 export const services = [
