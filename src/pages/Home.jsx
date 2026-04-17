@@ -7,7 +7,7 @@ import { portfolioProjects, companyInfo } from '../data/mock';
 const Home = () => {
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: { 
+    visible: {
       opacity: 1,
       transition: { staggerChildren: 0.1 }
     }
@@ -15,8 +15,8 @@ const Home = () => {
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
-    visible: { 
-      y: 0, opacity: 1, 
+    visible: {
+      y: 0, opacity: 1,
       transition: { type: "spring", stiffness: 100 }
     }
   };
@@ -38,7 +38,7 @@ const Home = () => {
       }
     );
 
-    const cards = document.querySelectorAll('.bento-card');
+    const cards = document.querySelectorAll('.bento-card, .deployment-card');
     cards.forEach(card => observer.observe(card));
 
     return () => observer.disconnect();
@@ -46,12 +46,12 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-[var(--vayora-bg-deep)] overflow-x-hidden pt-12 md:pt-16 text-white">
-      
+
       {/* 1. Split-Screen Hero */}
       <section className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-16">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -61,16 +61,16 @@ const Home = () => {
               <Sparkles className="w-4 h-4 text-[var(--vayora-accent-sage)]" />
               <span className="text-xs font-semibold text-[var(--vayora-accent-sage)] tracking-wider uppercase">AI Automation Agency</span>
             </div>
-            
+
             <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight leading-[1.1]">
               Automate & Scale <br />
               <span className="text-gradient">With AI.</span>
             </h1>
-            
+
             <p className="text-xl text-[var(--vayora-text-secondary)] max-w-lg leading-relaxed">
               We are an elite AI & Web Development agency. We build 24/7 AI Voice Agents, WhatsApp bots, and stunning premium websites that turn your traffic into booked revenue.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link to="/contact" className="px-8 py-4 bg-white text-black font-bold rounded-lg hover:bg-[var(--vayora-accent-sage)] transition-colors shadow-[0_0_40px_rgba(56,189,248,0.2)] text-center">
                 Automate Your Business
@@ -81,27 +81,27 @@ const Home = () => {
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
             className="relative lg:h-[600px] rounded-3xl overflow-hidden border border-[var(--vayora-border-subtle)] shadow-[0_0_80px_rgba(56,189,248,0.1)] group"
           >
-             <div className="absolute inset-0 bg-gradient-to-t from-[var(--vayora-bg-deep)] to-transparent z-10"></div>
-             <img 
-               src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1920&q=80" 
-               alt="AI Abstract"
-               className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-1000"
-             />
+            <div className="absolute inset-0 bg-gradient-to-t from-[var(--vayora-bg-deep)] to-transparent z-10"></div>
+            <img
+              src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1920&q=80"
+              alt="AI Abstract"
+              className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-1000"
+            />
           </motion.div>
-          
+
         </div>
       </section>
 
       {/* 2. Bento Box Services Layout */}
       <section className="py-24 relative z-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -111,7 +111,7 @@ const Home = () => {
             <p className="text-[var(--vayora-text-muted)] max-w-2xl mx-auto">Everything you need to dominate your market in one seamless package.</p>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -123,7 +123,7 @@ const Home = () => {
               <Link to="/services#ai-voice-call-agents" className="absolute inset-0 z-20"></Link>
               <div className="bg-layer-high absolute inset-0 bg-cover bg-center opacity-30 group-hover:opacity-70 transition-opacity duration-700" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80)' }}></div>
               <div className="absolute inset-0 bg-gradient-to-r from-[var(--vayora-bg-deep)] via-[var(--vayora-bg-deep)]/90 to-transparent"></div>
-              
+
               <div className="relative z-10 flex flex-col h-full justify-center">
                 <div className="w-12 h-12 bg-[var(--vayora-bg-elevated)]/80 backdrop-blur-md border border-[var(--vayora-border-subtle)] rounded-xl flex items-center justify-center mb-6 shadow-lg">
                   <PhoneCall className="w-5 h-5 text-[var(--vayora-accent-sage)]" />
@@ -138,7 +138,7 @@ const Home = () => {
               <Link to="/services#whatsapp-ai-automations" className="absolute inset-0 z-20"></Link>
               <div className="bg-layer-mid absolute inset-0 bg-cover bg-center opacity-20 group-hover:opacity-60 transition-opacity duration-700" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&q=80)' }}></div>
               <div className="absolute inset-0 bg-gradient-to-t from-[var(--vayora-bg-deep)] via-[var(--vayora-bg-deep)]/80 to-transparent opacity-90"></div>
-              
+
               <div className="relative z-10 flex flex-col h-full justify-between">
                 <div>
                   <div className="w-12 h-12 bg-[var(--vayora-bg-elevated)]/80 backdrop-blur-md border border-[var(--vayora-border-subtle)] rounded-xl flex items-center justify-center mb-6">
@@ -148,12 +148,12 @@ const Home = () => {
                   <p className="text-[var(--vayora-text-secondary)] text-sm mb-6">Deeply integrated chatbots that instantly reply to DMs, capture lead information, and close sales interactively.</p>
                 </div>
                 <div className="space-y-2 mt-auto">
-                   <div className="flex items-center text-xs font-semibold text-[var(--vayora-text-muted)] group-hover:text-white transition-colors bg-white/5 p-3 rounded-lg backdrop-blur-sm border border-[var(--vayora-border-subtle)]">
-                     <span className="w-2.5 h-2.5 rounded-full bg-[#25D366] mr-3 shadow-[0_0_10px_rgba(37,211,102,0.8)]"></span> WhatsApp Native
-                   </div>
-                   <div className="flex items-center text-xs font-semibold text-[var(--vayora-text-muted)] group-hover:text-white transition-colors bg-white/5 p-3 rounded-lg backdrop-blur-sm border border-[var(--vayora-border-subtle)]">
-                     <span className="w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] mr-3 shadow-[0_0_10px_rgba(238,42,123,0.5)]"></span> Instagram DMs
-                   </div>
+                  <div className="flex items-center text-xs font-semibold text-[var(--vayora-text-muted)] group-hover:text-white transition-colors bg-white/5 p-3 rounded-lg backdrop-blur-sm border border-[var(--vayora-border-subtle)]">
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#25D366] mr-3 shadow-[0_0_10px_rgba(37,211,102,0.8)]"></span> WhatsApp Native
+                  </div>
+                  <div className="flex items-center text-xs font-semibold text-[var(--vayora-text-muted)] group-hover:text-white transition-colors bg-white/5 p-3 rounded-lg backdrop-blur-sm border border-[var(--vayora-border-subtle)]">
+                    <span className="w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] mr-3 shadow-[0_0_10px_rgba(238,42,123,0.5)]"></span> Instagram DMs
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -163,7 +163,7 @@ const Home = () => {
               <Link to="/services#business-website-development" className="absolute inset-0 z-20"></Link>
               <div className="bg-layer-mid absolute inset-0 bg-cover bg-center opacity-20 group-hover:opacity-60 transition-opacity duration-700" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&q=80)' }}></div>
               <div className="absolute inset-0 bg-gradient-to-t from-[var(--vayora-bg-deep)] to-transparent opacity-90"></div>
-              
+
               <div className="relative z-10 flex flex-col h-full justify-between">
                 <div className="w-12 h-12 bg-[var(--vayora-bg-elevated)]/80 backdrop-blur-md border border-[var(--vayora-border-subtle)] rounded-xl flex items-center justify-center">
                   <Monitor className="w-5 h-5 text-[var(--vayora-accent-sage)]" />
@@ -180,7 +180,7 @@ const Home = () => {
               <Link to="/services#brand-logo-identity-design" className="absolute inset-0 z-20"></Link>
               <div className="bg-layer-mid absolute inset-0 bg-cover bg-center opacity-20 group-hover:opacity-60 transition-opacity duration-700" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80)' }}></div>
               <div className="absolute inset-0 bg-gradient-to-t from-[var(--vayora-bg-deep)] to-transparent opacity-90"></div>
-              
+
               <div className="relative z-10 flex flex-col h-full justify-between">
                 <div className="w-12 h-12 bg-[var(--vayora-bg-elevated)]/80 backdrop-blur-md border border-[var(--vayora-border-subtle)] rounded-xl flex items-center justify-center">
                   <LayoutTemplate className="w-5 h-5 text-[var(--vayora-accent-sage)]" />
@@ -198,38 +198,38 @@ const Home = () => {
       {/* 3. Showcase Marquee / Latest Work Minimal Grid */}
       <section className="py-24 bg-[var(--vayora-bg-secondary)] border-y border-[var(--vayora-border-subtle)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-           <div className="flex justify-between items-end mb-12">
-             <h2 className="text-4xl font-bold">Latest Deployments</h2>
-             <Link to="/portfolio" className="text-[var(--vayora-accent-sage)] hover:text-white transition-colors flex items-center font-medium">
-               View All <ArrowRight className="ml-2 w-4 h-4" />
-             </Link>
-           </div>
+          <div className="flex justify-between items-end mb-12">
+            <h2 className="text-4xl font-bold">Latest Deployments</h2>
+            <Link to="/portfolio" className="text-[var(--vayora-accent-sage)] hover:text-white transition-colors flex items-center font-medium">
+              View All <ArrowRight className="ml-2 w-4 h-4" />
+            </Link>
+          </div>
 
-           <motion.div 
+          <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             className="grid md:grid-cols-2 gap-8"
-           >
-             {portfolioProjects.slice(0, 4).map((project) => (
-                <motion.div key={project.id} variants={itemVariants} className="group cursor-pointer">
-                  <div className="relative rounded-2xl overflow-hidden mb-4 border border-[var(--vayora-border-subtle)]">
-                    <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors z-10"></div>
-                    <img src={project.image} alt={project.title} className="w-full h-80 object-cover transform group-hover:scale-105 transition-transform duration-700" />
-                  </div>
-                  <h3 className="text-xl font-bold">{project.title}</h3>
-                  <p className="text-[var(--vayora-text-muted)]">{project.category}</p>
-                </motion.div>
-             ))}
-           </motion.div>
+          >
+            {portfolioProjects.slice(0, 4).map((project) => (
+              <motion.div key={project.id} variants={itemVariants} className="group cursor-pointer deployment-card">
+                <div className="relative rounded-2xl overflow-hidden mb-4 border border-[var(--vayora-border-subtle)]">
+                  <div className="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors z-10 deployment-overlay"></div>
+                  <img src={project.image} alt={project.title} className="w-full h-80 object-cover transform group-hover:scale-105 transition-transform duration-700 deployment-img" />
+                </div>
+                <h3 className="text-xl font-bold">{project.title}</h3>
+                <p className="text-[var(--vayora-text-muted)]">{project.category}</p>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </section>
 
       {/* 4. Massive Text CTA */}
       <section className="py-32 relative overflow-hidden flex items-center justify-center">
         <div className="absolute inset-0 bg-[var(--vayora-accent-sage)] opacity-[0.03] pointer-events-none"></div>
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
@@ -239,22 +239,32 @@ const Home = () => {
           <h2 className="text-5xl md:text-8xl font-black mb-8 tracking-tighter mix-blend-plus-lighter text-white">
             READY TO <br /> <span className="text-transparent border-text">DOMINATE?</span>
           </h2>
-          <style dangerouslySetInnerHTML={{__html: `
+          <style dangerouslySetInnerHTML={{
+            __html: `
             .border-text {
               -webkit-text-stroke: 2px rgba(255,255,255,0.2);
             }
             @media (max-width: 768px) {
+              .deployment-card.mobile-hover-trigger .deployment-overlay {
+                background-color: transparent !important;
+              }
+              .deployment-card.mobile-hover-trigger .deployment-img {
+                transform: scale(1.05) !important;
+                filter: brightness(1.25) !important;
+              }
               .bento-card.mobile-hover-trigger {
                 border-color: var(--vayora-border) !important;
-                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4) !important;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5) !important;
                 transform: translateY(-4px) !important;
                 z-index: 20 !important;
               }
               .bento-card.mobile-hover-trigger .bg-layer-high {
-                opacity: 0.7 !important;
+                opacity: 0.95 !important;
+                filter: brightness(1.15) !important;
               }
               .bento-card.mobile-hover-trigger .bg-layer-mid {
-                opacity: 0.6 !important;
+                opacity: 0.85 !important;
+                filter: brightness(1.15) !important;
               }
             }
           `}} />
