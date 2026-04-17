@@ -11,6 +11,7 @@ import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import { Toaster } from "./components/ui/toaster";
 import ScrollToTop from "./components/ScrollToTop"; // ✅ NEW
+import { Analytics } from '@vercel/analytics/react';
 
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 
@@ -36,6 +37,7 @@ function App() {
           <Footer />
           <Toaster />
         </HashRouter>
+        <Analytics />
       </div>
     </HelmetProvider>
   );
