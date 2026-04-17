@@ -33,13 +33,13 @@ const Navigation = () => {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-        className={`pointer-events-auto w-full transition-all duration-500 ${
-          isMobileMenuOpen 
+        style={{ transitionProperty: 'background-color, border-color, padding, max-width, box-shadow, backdrop-filter', transitionDuration: '500ms' }}
+        className={`pointer-events-auto w-full ${isMobileMenuOpen
             ? 'max-w-md rounded-2xl bg-[#0a0a0a]/95 backdrop-blur-2xl border border-[#333] shadow-2xl py-4 px-4'
-            : isScrolled 
-              ? 'max-w-3xl rounded-full nav-blur border border-[var(--vayora-border-subtle)] shadow-[0_20px_40px_rgba(0,0,0,0.4)] py-2 px-6' 
+            : isScrolled
+              ? 'max-w-3xl rounded-full nav-blur border border-[var(--vayora-border-subtle)] shadow-[0_20px_40px_rgba(0,0,0,0.4)] py-2 px-6'
               : 'max-w-7xl rounded-full bg-transparent border border-transparent py-4 px-2'
-        }`}
+          }`}
       >
         <div className="flex justify-between items-center h-12">
           {/* Logo */}
@@ -55,11 +55,10 @@ const Navigation = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-semibold transition-colors duration-200 ${
-                  isActive(link.path)
+                className={`text-sm font-semibold transition-colors duration-200 ${isActive(link.path)
                     ? 'text-[var(--vayora-accent-sage)]'
                     : 'text-[var(--vayora-text-muted)] hover:text-white'
-                }`}
+                  }`}
               >
                 {link.name}
               </Link>
@@ -84,7 +83,7 @@ const Navigation = () => {
         {/* Mobile Menu */}
         <AnimatePresence>
           {isMobileMenuOpen && (
-            <motion.div 
+            <motion.div
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: 'auto', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
@@ -96,11 +95,10 @@ const Navigation = () => {
                     key={link.path}
                     to={link.path}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className={`block text-base font-medium transition-colors duration-200 ${
-                      isActive(link.path)
+                    className={`block text-base font-medium transition-colors duration-200 ${isActive(link.path)
                         ? 'text-[var(--vayora-accent-sage)]'
                         : 'text-[var(--vayora-text-secondary)]'
-                    }`}
+                      }`}
                   >
                     {link.name}
                   </Link>

@@ -21,6 +21,29 @@ const Home = () => {
     }
   };
 
+  React.useEffect(() => {
+    // Observer to trigger the 'glow' effect for mobile users when scrolling
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('mobile-hover-trigger');
+          } else {
+            entry.target.classList.remove('mobile-hover-trigger');
+          }
+        });
+      },
+      {
+        rootMargin: "-30% 0px -30% 0px" // Trigger when card enters the middle 40% of the screen
+      }
+    );
+
+    const cards = document.querySelectorAll('.bento-card');
+    cards.forEach(card => observer.observe(card));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="min-h-screen bg-[var(--vayora-bg-deep)] overflow-x-hidden pt-12 md:pt-16 text-white">
       
@@ -96,9 +119,9 @@ const Home = () => {
             className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(220px,auto)] md:auto-rows-[250px]"
           >
             {/* Bento 1: Wide - Voice Call Agents */}
-            <motion.div variants={itemVariants} className="md:col-span-2 rounded-3xl bg-[var(--vayora-bg-secondary)] border border-[var(--vayora-border-subtle)] p-8 relative overflow-hidden group hover:border-[var(--vayora-accent-sage)] transition-all duration-300 hover:shadow-[0_0_60px_rgba(56,189,248,0.6)] z-10 hover:z-20 hover:-translate-y-1">
+            <motion.div variants={itemVariants} className="bento-card md:col-span-2 rounded-3xl bg-[var(--vayora-bg-secondary)] border border-[var(--vayora-border-subtle)] p-8 relative overflow-hidden group hover:border-[var(--vayora-accent-sage)] transition-all duration-300 hover:shadow-[0_0_60px_rgba(56,189,248,0.6)] z-10 hover:z-20 hover:-translate-y-1">
               <Link to="/services#ai-voice-call-agents" className="absolute inset-0 z-20"></Link>
-              <div className="absolute inset-0 bg-cover bg-center opacity-30 group-hover:opacity-70 transition-opacity duration-700" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80)' }}></div>
+              <div className="bg-layer-high absolute inset-0 bg-cover bg-center opacity-30 group-hover:opacity-70 transition-opacity duration-700" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80)' }}></div>
               <div className="absolute inset-0 bg-gradient-to-r from-[var(--vayora-bg-deep)] via-[var(--vayora-bg-deep)]/90 to-transparent"></div>
               
               <div className="relative z-10 flex flex-col h-full justify-center">
@@ -111,9 +134,9 @@ const Home = () => {
             </motion.div>
 
             {/* Bento 2: Tall - Social Messaging AI */}
-            <motion.div variants={itemVariants} className="md:col-span-1 md:row-span-2 rounded-3xl bg-[var(--vayora-bg-secondary)] border border-[var(--vayora-border-subtle)] p-8 relative overflow-hidden group hover:border-[var(--vayora-accent-sage)] transition-all duration-300 hover:shadow-[0_0_60px_rgba(56,189,248,0.6)] z-10 hover:z-20 hover:-translate-y-1">
+            <motion.div variants={itemVariants} className="bento-card md:col-span-1 md:row-span-2 rounded-3xl bg-[var(--vayora-bg-secondary)] border border-[var(--vayora-border-subtle)] p-8 relative overflow-hidden group hover:border-[var(--vayora-accent-sage)] transition-all duration-300 hover:shadow-[0_0_60px_rgba(56,189,248,0.6)] z-10 hover:z-20 hover:-translate-y-1">
               <Link to="/services#whatsapp-ai-automations" className="absolute inset-0 z-20"></Link>
-              <div className="absolute inset-0 bg-cover bg-center opacity-20 group-hover:opacity-60 transition-opacity duration-700" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&q=80)' }}></div>
+              <div className="bg-layer-mid absolute inset-0 bg-cover bg-center opacity-20 group-hover:opacity-60 transition-opacity duration-700" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&q=80)' }}></div>
               <div className="absolute inset-0 bg-gradient-to-t from-[var(--vayora-bg-deep)] via-[var(--vayora-bg-deep)]/80 to-transparent opacity-90"></div>
               
               <div className="relative z-10 flex flex-col h-full justify-between">
@@ -136,9 +159,9 @@ const Home = () => {
             </motion.div>
 
             {/* Bento 3: Normal - Web Dev (Row 2, Col 1) */}
-            <motion.div variants={itemVariants} className="rounded-3xl bg-[var(--vayora-bg-secondary)] border border-[var(--vayora-border-subtle)] p-8 relative overflow-hidden group hover:border-[var(--vayora-accent-sage)] transition-all duration-300 hover:shadow-[0_0_60px_rgba(56,189,248,0.6)] z-10 hover:z-20 hover:-translate-y-1">
+            <motion.div variants={itemVariants} className="bento-card rounded-3xl bg-[var(--vayora-bg-secondary)] border border-[var(--vayora-border-subtle)] p-8 relative overflow-hidden group hover:border-[var(--vayora-accent-sage)] transition-all duration-300 hover:shadow-[0_0_60px_rgba(56,189,248,0.6)] z-10 hover:z-20 hover:-translate-y-1">
               <Link to="/services#business-website-development" className="absolute inset-0 z-20"></Link>
-              <div className="absolute inset-0 bg-cover bg-center opacity-20 group-hover:opacity-60 transition-opacity duration-700" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&q=80)' }}></div>
+              <div className="bg-layer-mid absolute inset-0 bg-cover bg-center opacity-20 group-hover:opacity-60 transition-opacity duration-700" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&q=80)' }}></div>
               <div className="absolute inset-0 bg-gradient-to-t from-[var(--vayora-bg-deep)] to-transparent opacity-90"></div>
               
               <div className="relative z-10 flex flex-col h-full justify-between">
@@ -153,9 +176,9 @@ const Home = () => {
             </motion.div>
 
             {/* Bento 4: Normal - Brand Aura (Row 2, Col 2) */}
-            <motion.div variants={itemVariants} className="rounded-3xl bg-[var(--vayora-bg-secondary)] border border-[var(--vayora-border-subtle)] p-8 relative overflow-hidden group hover:border-[var(--vayora-accent-sage)] transition-all duration-300 hover:shadow-[0_0_60px_rgba(56,189,248,0.6)] z-10 hover:z-20 hover:-translate-y-1">
+            <motion.div variants={itemVariants} className="bento-card rounded-3xl bg-[var(--vayora-bg-secondary)] border border-[var(--vayora-border-subtle)] p-8 relative overflow-hidden group hover:border-[var(--vayora-accent-sage)] transition-all duration-300 hover:shadow-[0_0_60px_rgba(56,189,248,0.6)] z-10 hover:z-20 hover:-translate-y-1">
               <Link to="/services#brand-logo-identity-design" className="absolute inset-0 z-20"></Link>
-              <div className="absolute inset-0 bg-cover bg-center opacity-20 group-hover:opacity-60 transition-opacity duration-700" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80)' }}></div>
+              <div className="bg-layer-mid absolute inset-0 bg-cover bg-center opacity-20 group-hover:opacity-60 transition-opacity duration-700" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&q=80)' }}></div>
               <div className="absolute inset-0 bg-gradient-to-t from-[var(--vayora-bg-deep)] to-transparent opacity-90"></div>
               
               <div className="relative z-10 flex flex-col h-full justify-between">
@@ -219,6 +242,20 @@ const Home = () => {
           <style dangerouslySetInnerHTML={{__html: `
             .border-text {
               -webkit-text-stroke: 2px rgba(255,255,255,0.2);
+            }
+            @media (max-width: 768px) {
+              .bento-card.mobile-hover-trigger {
+                border-color: var(--vayora-accent-sage) !important;
+                box-shadow: 0 0 60px rgba(56, 189, 248, 0.6) !important;
+                transform: translateY(-4px) !important;
+                z-index: 20 !important;
+              }
+              .bento-card.mobile-hover-trigger .bg-layer-high {
+                opacity: 0.7 !important;
+              }
+              .bento-card.mobile-hover-trigger .bg-layer-mid {
+                opacity: 0.6 !important;
+              }
             }
           `}} />
           <Link to="/contact" className="inline-flex items-center justify-center px-10 py-5 bg-white text-black rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-[0_0_50px_rgba(255,255,255,0.15)]">
